@@ -1,0 +1,122 @@
+To challenge: ["|/challenge qzqzqzqz, randombattle"]
+
+Challenge from: a["|updatechallenges|{\"challengesFrom\":{\"qzqzqzqz\":\"randombattle\"},\"challengeTo\":null}"]
+
+To accept a challenge: ["|/accept qzqzqzqz"]
+
+a[">battle-randombattle-95938644\n|request|{\"side\":{\"name\":\"IRONIRODLK\",\"id\":\"p1\",\"pokemon\":[{\"ident\":\"p1: Carbink\",\"details\":\"Carbink, L83\",\"condition\":\"219/219\",\"active\":true,\"stats\":{\"atk\":131,\"def\":297,\"spa\":131,\"spd\":297,\"spe\":131},\"moves\":[\"stealthrock\",\"powergem\",\"lightscreen\",\"explosion\"],\"baseAbility\":\"sturdy\",\"item\":\"lightclay\",\"canMegaEvo\":false},{\"ident\":\"p1: Gastrodon\",\"details\":\"Gastrodon, L77, F\",\"condition\":\"297/297\",\"active\":false,\"stats\":{\"atk\":172,\"def\":149,\"spa\":186,\"spd\":171,\"spe\":105},\"moves\":[\"scald\",\"stockpile\",\"icebeam\",\"earthpower\"],\"baseAbility\":\"stormdrain\",\"item\":\"leftovers\",\"canMegaEvo\":false},{\"ident\":\"p1: Beautifly\",\"details\":\"Beautifly, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":170,\"def\":134,\"spa\":220,\"spd\":134,\"spe\":160},\"moves\":[\"hiddenpowerfighting60\",\"quiverdance\",\"gigadrain\",\"bugbuzz\"],\"baseAbility\":\"swarm\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Nidoqueen\",\"details\":\"Nidoqueen, L86, F\",\"condition\":\"295/295\",\"active\":false,\"stats\":{\"atk\":207,\"def\":199,\"spa\":178,\"spd\":195,\"spe\":180},\"moves\":[\"sludgewave\",\"toxicspikes\",\"stealthrock\",\"focusblast\"],\"baseAbility\":\"sheerforce\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Scizor\",\"details\":\"Scizor, L74, F\",\"condition\":\"226/226\",\"active\":false,\"stats\":{\"atk\":235,\"def\":191,\"spa\":124,\"spd\":161,\"spe\":139},\"moves\":[\"knockoff\",\"superpower\",\"bulletpunch\",\"bugbite\"],\"baseAbility\":\"technician\",\"item\":\"scizorite\",\"canMegaEvo\":true},{\"ident\":\"p1: Wormadam\",\"details\":\"Wormadam, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":151,\"def\":195,\"spa\":185,\"spd\":229,\"spe\":110},\"moves\":[\"signalbeam\",\"leafstorm\",\"protect\",\"hiddenpowerrock60\"],\"baseAbility\":\"overcoat\",\"item\":\"leftovers\",\"canMegaEvo\":false}]}}"]
+
+a[">battle-randombattle-95938644\n|request|{\"active\":[{\"moves\":[{\"move\":\"Stealth Rock\",\"id\":\"stealthrock\",\"pp\":32,\"maxpp\":32,\"target\":\"foeSide\",\"disabled\":false},{\"move\":\"Power Gem\",\"id\":\"powergem\",\"pp\":32,\"maxpp\":32,\"target\":\"normal\",\"disabled\":false},{\"move\":\"Light Screen\",\"id\":\"lightscreen\",\"pp\":48,\"maxpp\":48,\"target\":\"allySide\",\"disabled\":false},{\"move\":\"Explosion\",\"id\":\"explosion\",\"pp\":8,\"maxpp\":8,\"target\":\"allAdjacent\",\"disabled\":false}]}],\"side\":{\"name\":\"IRONIRODLK\",\"id\":\"p1\",\"pokemon\":[{\"ident\":\"p1: Carbink\",\"details\":\"Carbink, L83\",\"condition\":\"219/219\",\"active\":true,\"stats\":{\"atk\":131,\"def\":297,\"spa\":131,\"spd\":297,\"spe\":131},\"moves\":[\"stealthrock\",\"powergem\",\"lightscreen\",\"explosion\"],\"baseAbility\":\"sturdy\",\"item\":\"lightclay\",\"canMegaEvo\":false},{\"ident\":\"p1: Gastrodon\",\"details\":\"Gastrodon, L77, F\",\"condition\":\"297/297\",\"active\":false,\"stats\":{\"atk\":172,\"def\":149,\"spa\":186,\"spd\":171,\"spe\":105},\"moves\":[\"scald\",\"stockpile\",\"icebeam\",\"earthpower\"],\"baseAbility\":\"stormdrain\",\"item\":\"leftovers\",\"canMegaEvo\":false},{\"ident\":\"p1: Beautifly\",\"details\":\"Beautifly, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":170,\"def\":134,\"spa\":220,\"spd\":134,\"spe\":160},\"moves\":[\"hiddenpowerfighting60\",\"quiverdance\",\"gigadrain\",\"bugbuzz\"],\"baseAbility\":\"swarm\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Nidoqueen\",\"details\":\"Nidoqueen, L86, F\",\"condition\":\"295/295\",\"active\":false,\"stats\":{\"atk\":207,\"def\":199,\"spa\":178,\"spd\":195,\"spe\":180},\"moves\":[\"sludgewave\",\"toxicspikes\",\"stealthrock\",\"focusblast\"],\"baseAbility\":\"sheerforce\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Scizor\",\"details\":\"Scizor, L74, F\",\"condition\":\"226/226\",\"active\":false,\"stats\":{\"atk\":235,\"def\":191,\"spa\":124,\"spd\":161,\"spe\":139},\"moves\":[\"knockoff\",\"superpower\",\"bulletpunch\",\"bugbite\"],\"baseAbility\":\"technician\",\"item\":\"scizorite\",\"canMegaEvo\":true},{\"ident\":\"p1: Wormadam\",\"details\":\"Wormadam, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":151,\"def\":195,\"spa\":185,\"spd\":229,\"spe\":110},\"moves\":[\"signalbeam\",\"leafstorm\",\"protect\",\"hiddenpowerrock60\"],\"baseAbility\":\"overcoat\",\"item\":\"leftovers\",\"canMegaEvo\":false}]},\"rqid\":1}"]
+
+a[">battle-randombattle-95938644\n|player|p2|qzqzqzqz|266\n|gametype|singles\n|gen|6\n|tier|Random Battle\n|rule|Sleep Clause Mod: Limit one foe put to sleep\n|rule|HP Percentage Mod: HP is reported as percentages\n|\n|start\n|switch|p1a: Carbink|Carbink, L83|219/219\n|switch|p2a: Volcarona|Volcarona, L74, M|100/100\n|turn|1"]
+
+Attack with Stealth Rock:
+["battle-randombattle-95938644|/choose move Stealth Rock|1"]
+
+Get Attacked:
+a[">battle-randombattle-95938644\n|request|{\"active\":[{\"moves\":[{\"move\":\"Stealth Rock\",\"id\":\"stealthrock\",\"pp\":31,\"maxpp\":32,\"target\":\"foeSide\",\"disabled\":false},{\"move\":\"Power Gem\",\"id\":\"powergem\",\"pp\":32,\"maxpp\":32,\"target\":\"normal\",\"disabled\":false},{\"move\":\"Light Screen\",\"id\":\"lightscreen\",\"pp\":48,\"maxpp\":48,\"target\":\"allySide\",\"disabled\":false},{\"move\":\"Explosion\",\"id\":\"explosion\",\"pp\":8,\"maxpp\":8,\"target\":\"allAdjacent\",\"disabled\":false}]}],\"side\":{\"name\":\"IRONIRODLK\",\"id\":\"p1\",\"pokemon\":[{\"ident\":\"p1: Carbink\",\"details\":\"Carbink, L83\",\"condition\":\"191/219\",\"active\":true,\"stats\":{\"atk\":131,\"def\":297,\"spa\":131,\"spd\":297,\"spe\":131},\"moves\":[\"stealthrock\",\"powergem\",\"lightscreen\",\"explosion\"],\"baseAbility\":\"sturdy\",\"item\":\"lightclay\",\"canMegaEvo\":false},{\"ident\":\"p1: Gastrodon\",\"details\":\"Gastrodon, L77, F\",\"condition\":\"297/297\",\"active\":false,\"stats\":{\"atk\":172,\"def\":149,\"spa\":186,\"spd\":171,\"spe\":105},\"moves\":[\"scald\",\"stockpile\",\"icebeam\",\"earthpower\"],\"baseAbility\":\"stormdrain\",\"item\":\"leftovers\",\"canMegaEvo\":false},{\"ident\":\"p1: Beautifly\",\"details\":\"Beautifly, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":170,\"def\":134,\"spa\":220,\"spd\":134,\"spe\":160},\"moves\":[\"hiddenpowerfighting60\",\"quiverdance\",\"gigadrain\",\"bugbuzz\"],\"baseAbility\":\"swarm\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Nidoqueen\",\"details\":\"Nidoqueen, L86, F\",\"condition\":\"295/295\",\"active\":false,\"stats\":{\"atk\":207,\"def\":199,\"spa\":178,\"spd\":195,\"spe\":180},\"moves\":[\"sludgewave\",\"toxicspikes\",\"stealthrock\",\"focusblast\"],\"baseAbility\":\"sheerforce\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Scizor\",\"details\":\"Scizor, L74, F\",\"condition\":\"226/226\",\"active\":false,\"stats\":{\"atk\":235,\"def\":191,\"spa\":124,\"spd\":161,\"spe\":139},\"moves\":[\"knockoff\",\"superpower\",\"bulletpunch\",\"bugbite\"],\"baseAbility\":\"technician\",\"item\":\"scizorite\",\"canMegaEvo\":true},{\"ident\":\"p1: Wormadam\",\"details\":\"Wormadam, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":151,\"def\":195,\"spa\":185,\"spd\":229,\"spe\":110},\"moves\":[\"signalbeam\",\"leafstorm\",\"protect\",\"hiddenpowerrock60\"],\"baseAbility\":\"overcoat\",\"item\":\"leftovers\",\"canMegaEvo\":false}]},\"rqid\":2}"]
+And then
+a[">battle-randombattle-95938644\n|\n|move|p2a: Volcarona|Fiery Dance|p1a: Carbink\n|-resisted|p1a: Carbink\n|-damage|p1a: Carbink|191/219\n|move|p1a: Carbink|Stealth Rock|p2a: Volcarona\n|-sidestart|p2: qzqzqzqz|move: Stealth Rock\n|\n|turn|2"]
+
+Attack with Explosion:
+["battle-randombattle-95938644|/choose move Explosion|2"]
+
+Get attacked with Giga Drain: (Got force switched)
+a[">battle-randombattle-95938644\n|request|{\"forceSwitch\":[true],\"side\":{\"name\":\"IRONIRODLK\",\"id\":\"p1\",\"pokemon\":[{\"ident\":\"p1: Carbink\",\"details\":\"Carbink, L83\",\"condition\":\"0 fnt\",\"active\":true,\"stats\":{\"atk\":131,\"def\":297,\"spa\":131,\"spd\":297,\"spe\":131},\"moves\":[\"stealthrock\",\"powergem\",\"lightscreen\",\"explosion\"],\"baseAbility\":\"sturdy\",\"item\":\"lightclay\",\"canMegaEvo\":false},{\"ident\":\"p1: Gastrodon\",\"details\":\"Gastrodon, L77, F\",\"condition\":\"297/297\",\"active\":false,\"stats\":{\"atk\":172,\"def\":149,\"spa\":186,\"spd\":171,\"spe\":105},\"moves\":[\"scald\",\"stockpile\",\"icebeam\",\"earthpower\"],\"baseAbility\":\"stormdrain\",\"item\":\"leftovers\",\"canMegaEvo\":false},{\"ident\":\"p1: Beautifly\",\"details\":\"Beautifly, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":170,\"def\":134,\"spa\":220,\"spd\":134,\"spe\":160},\"moves\":[\"hiddenpowerfighting60\",\"quiverdance\",\"gigadrain\",\"bugbuzz\"],\"baseAbility\":\"swarm\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Nidoqueen\",\"details\":\"Nidoqueen, L86, F\",\"condition\":\"295/295\",\"active\":false,\"stats\":{\"atk\":207,\"def\":199,\"spa\":178,\"spd\":195,\"spe\":180},\"moves\":[\"sludgewave\",\"toxicspikes\",\"stealthrock\",\"focusblast\"],\"baseAbility\":\"sheerforce\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Scizor\",\"details\":\"Scizor, L74, F\",\"condition\":\"226/226\",\"active\":false,\"stats\":{\"atk\":235,\"def\":191,\"spa\":124,\"spd\":161,\"spe\":139},\"moves\":[\"knockoff\",\"superpower\",\"bulletpunch\",\"bugbite\"],\"baseAbility\":\"technician\",\"item\":\"scizorite\",\"canMegaEvo\":true},{\"ident\":\"p1: Wormadam\",\"details\":\"Wormadam, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":151,\"def\":195,\"spa\":185,\"spd\":229,\"spe\":110},\"moves\":[\"signalbeam\",\"leafstorm\",\"protect\",\"hiddenpowerrock60\"],\"baseAbility\":\"overcoat\",\"item\":\"leftovers\",\"canMegaEvo\":false}]},\"rqid\":3}"]
+And then:
+a[">battle-randombattle-95938644\n|\n|move|p2a: Volcarona|Giga Drain|p1a: Carbink\n|-supereffective|p1a: Carbink\n|-damage|p1a: Carbink|119/219\n|move|p1a: Carbink|Explosion|p2a: Volcarona\n|-damage|p2a: Volcarona|34/100\n|faint|p1a: Carbink\n|"]
+
+Switch:
+["battle-randombattle-95938644|/choose switch 2|3"]
+
+After Switch: from server:
+a[">battle-randombattle-95938644\n|request|{\"active\":[{\"moves\":[{\"move\":\"Scald\",\"id\":\"scald\",\"pp\":24,\"maxpp\":24,\"target\":\"normal\",\"disabled\":false},{\"move\":\"Stockpile\",\"id\":\"stockpile\",\"pp\":32,\"maxpp\":32,\"target\":\"self\",\"disabled\":false},{\"move\":\"Ice Beam\",\"id\":\"icebeam\",\"pp\":16,\"maxpp\":16,\"target\":\"normal\",\"disabled\":false},{\"move\":\"Earth Power\",\"id\":\"earthpower\",\"pp\":16,\"maxpp\":16,\"target\":\"normal\",\"disabled\":false}]}],\"side\":{\"name\":\"IRONIRODLK\",\"id\":\"p1\",\"pokemon\":[{\"ident\":\"p1: Gastrodon\",\"details\":\"Gastrodon, L77, F\",\"condition\":\"297/297\",\"active\":true,\"stats\":{\"atk\":172,\"def\":149,\"spa\":186,\"spd\":171,\"spe\":105},\"moves\":[\"scald\",\"stockpile\",\"icebeam\",\"earthpower\"],\"baseAbility\":\"stormdrain\",\"item\":\"leftovers\",\"canMegaEvo\":false},{\"ident\":\"p1: Carbink\",\"details\":\"Carbink, L83\",\"condition\":\"0 fnt\",\"active\":false,\"stats\":{\"atk\":131,\"def\":297,\"spa\":131,\"spd\":297,\"spe\":131},\"moves\":[\"stealthrock\",\"powergem\",\"lightscreen\",\"explosion\"],\"baseAbility\":\"sturdy\",\"item\":\"lightclay\",\"canMegaEvo\":false},{\"ident\":\"p1: Beautifly\",\"details\":\"Beautifly, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":170,\"def\":134,\"spa\":220,\"spd\":134,\"spe\":160},\"moves\":[\"hiddenpowerfighting60\",\"quiverdance\",\"gigadrain\",\"bugbuzz\"],\"baseAbility\":\"swarm\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Nidoqueen\",\"details\":\"Nidoqueen, L86, F\",\"condition\":\"295/295\",\"active\":false,\"stats\":{\"atk\":207,\"def\":199,\"spa\":178,\"spd\":195,\"spe\":180},\"moves\":[\"sludgewave\",\"toxicspikes\",\"stealthrock\",\"focusblast\"],\"baseAbility\":\"sheerforce\",\"item\":\"lifeorb\",\"canMegaEvo\":false},{\"ident\":\"p1: Scizor\",\"details\":\"Scizor, L74, F\",\"condition\":\"226/226\",\"active\":false,\"stats\":{\"atk\":235,\"def\":191,\"spa\":124,\"spd\":161,\"spe\":139},\"moves\":[\"knockoff\",\"superpower\",\"bulletpunch\",\"bugbite\"],\"baseAbility\":\"technician\",\"item\":\"scizorite\",\"canMegaEvo\":true},{\"ident\":\"p1: Wormadam\",\"details\":\"Wormadam, L86, F\",\"condition\":\"243/243\",\"active\":false,\"stats\":{\"atk\":151,\"def\":195,\"spa\":185,\"spd\":229,\"spe\":110},\"moves\":[\"signalbeam\",\"leafstorm\",\"protect\",\"hiddenpowerrock60\"],\"baseAbility\":\"overcoat\",\"item\":\"leftovers\",\"canMegaEvo\":false}]},\"rqid\":4}"]
+a[">battle-randombattle-95938644\n|\n|switch|p1a: Gastrodon|Gastrodon, L77, F|297/297\n|turn|3"]
+
+The first one from above is:
+{ active: 
+   [ { moves: 
+        [ { move: 'Signal Beam',
+            id: 'signalbeam',
+            pp: 24,
+            maxpp: 24,
+            target: 'normal',
+            disabled: false },
+          { move: 'Leaf Storm',
+            id: 'leafstorm',
+            pp: 8,
+            maxpp: 8,
+            target: 'normal',
+            disabled: false },
+          { move: 'Protect',
+            id: 'protect',
+            pp: 15,
+            maxpp: 16,
+            target: 'self',
+            disabled: false },
+          { move: 'Hidden Power Rock',
+            id: 'hiddenpower',
+            pp: 24,
+            maxpp: 24,
+            target: 'normal',
+            disabled: false } ] } ],
+  side: 
+   { name: 'IRONIRODLK',
+     id: 'p1',
+     pokemon: 
+      [ { ident: 'p1: Wormadam',
+          details: 'Wormadam, L86, F',
+          condition: '243/243',
+          active: true,
+          stats: { atk: 151, def: 195, spa: 185, spd: 229, spe: 110 },
+          moves: [ 'signalbeam', 'leafstorm', 'protect', 'hiddenpowerrock60' ],
+          baseAbility: 'overcoat',
+          item: 'leftovers',
+          canMegaEvo: false },
+        { ident: 'p1: Carbink',
+          details: 'Carbink, L83',
+          condition: '0 fnt',
+          active: false,
+          stats: { atk: 131, def: 297, spa: 131, spd: 297, spe: 131 },
+          moves: [ 'stealthrock', 'powergem', 'lightscreen', 'explosion' ],
+          baseAbility: 'sturdy',
+          item: 'lightclay',
+          canMegaEvo: false },
+        { ident: 'p1: Beautifly',
+          details: 'Beautifly, L86, F',
+          condition: '243/243',
+          active: false,
+          stats: { atk: 170, def: 134, spa: 220, spd: 134, spe: 160 },
+          moves: [ 'hiddenpowerfighting60', 'quiverdance', 'gigadrain', 'bugbuzz' ],
+          baseAbility: 'swarm',
+          item: 'lifeorb',
+          canMegaEvo: false },
+        { ident: 'p1: Nidoqueen',
+          details: 'Nidoqueen, L86, F',
+          condition: '295/295',
+          active: false,
+          stats: { atk: 207, def: 199, spa: 178, spd: 195, spe: 180 },
+          moves: [ 'sludgewave', 'toxicspikes', 'stealthrock', 'focusblast' ],
+          baseAbility: 'sheerforce',
+          item: 'lifeorb',
+          canMegaEvo: false },
+        { ident: 'p1: Scizor',
+          details: 'Scizor, L74, F',
+          condition: '226/226',
+          active: false,
+          stats: { atk: 235, def: 191, spa: 124, spd: 161, spe: 139 },
+          moves: [ 'knockoff', 'superpower', 'bulletpunch', 'bugbite' ],
+          baseAbility: 'technician',
+          item: 'scizorite',
+          canMegaEvo: true },
+        { ident: 'p1: Gastrodon',
+          details: 'Gastrodon, L77, F',
+          condition: '297/297',
+          active: false,
+          stats: { atk: 172, def: 149, spa: 186, spd: 171, spe: 105 },
+          moves: [ 'scald', 'stockpile', 'icebeam', 'earthpower' ],
+          baseAbility: 'stormdrain',
+          item: 'leftovers',
+          canMegaEvo: false } ] },
+  rqid: 6 }
+
