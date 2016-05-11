@@ -20,18 +20,6 @@ def main():
         record(moves)
 
 
-def find_move_names(table):
-    names = []
-
-    for row in table:
-        name_link = row.find('td', attrs = {'class': 'cell-icon-string'}).find('a')
-        name = name_link.string
-
-        names.append(name)
-
-    return names
-
-
 def build_moves_dic(table):
     moves = {}
 
@@ -41,7 +29,6 @@ def build_moves_dic(table):
         power = row.findAll('td', attrs = {'class': 'num'})[0].string
 
         moves[name] = power
-        #print moves
 
     return moves
 
