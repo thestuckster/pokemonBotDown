@@ -1,10 +1,11 @@
-""" Python scraper to grab and construct a SQL schema for pokemon moves.
+""" Python scraper to grab and construct a json for pokemon moves.
     URL: http://pokemondb.net/move/all
     Author: Stephen
     Date: 5.10.2016
 """
 
 import requests
+import json
 from BeautifulSoup import BeautifulSoup
 
 
@@ -34,14 +35,20 @@ def build_moves_dic(table):
 
 
 def record(moves):
-    file = open('move_list.txt', 'w')
-    file.write("move,power\n\n")
+    movefile = open('moveList.json', 'w')
+    #file.write("moveList = {")
 
-    for key, val in moves.iteritems():
-        line = key + "," + val + "\n"
-        file.write(line)
+#    for key, val in moves.iteritems():
+    #    if val == "-":
+    #        val = "null"
 
-    file.close()
+    #    line = "'" + key + "'" + ": " + val + ",\n"
+    #    file.write(line)
+
+    #file.write("}")
+
+    json.dump(moves, movefile)
+    movefile.close()
 
 if __name__ == "__main__":
     main()
