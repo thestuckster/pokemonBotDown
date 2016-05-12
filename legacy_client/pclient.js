@@ -7,8 +7,8 @@ var http = require('http');
 var comm = require('./comm.js');
 
 var config = {
-    username: 'USERNAME',
-    password: 'PASSWORD',
+    username: 'ironeternity',
+    password: 'cubecubecube',
 };
 
 var rl = readline.createInterface({
@@ -35,7 +35,7 @@ rl.on('line', function (line){
             pclient.chooseMove(sline[1]);
         }
     } else if (cmd === "switch"){
-        
+
         if (sline[2] === "next"){
             pclient.chooseSwitch(sline[1], true);
         } else {
