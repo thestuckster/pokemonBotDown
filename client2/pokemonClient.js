@@ -4,10 +4,15 @@ const Promise = require('bluebird');
 const EventEmitter = require('events');
 const assert = require('assert');
 
+const Battle = require('./battle');
+
 class PokemonClient extends EventEmitter {
     constructor(config){
         super();
-        this.config = config;
+
+        this.username = config.username;
+        this.password = config.password;
+
         this.ws = new WebSocket('ws://sim.smogon.com:8000/showdown/websocket');
 
         this.systemMessageHandlers = {
@@ -54,12 +59,15 @@ class PokemonClient extends EventEmitter {
     }
 
     handleBattleMessage(msg){
-
+        console.log("=== NEW BATTLE MESSAGE === ");
         const lines = msg.split('\n');
         const battleId = lines[0].slice(1);
 
+        const battle = this.getBattle(battleId); // May be undefined.
+
         const battleHandlers = {
             'init': (args) => {
+                assert(battle == null, 'Battle recieved init but already exists!');
                 this.newBattle(battleId);
             },
 
@@ -73,9 +81,36 @@ class PokemonClient extends EventEmitter {
                 const level = parseInt(levelStr.slice(1));
             },
 
-            'p1': (args) => {
-                assert(args[1] == this.config.username, "Username does not match player 1!");
+            'player': (args) => {
+                if (args[0] === 'p1'){
+                    assert.equal(args[1], this.username, "Username does not match player 1!");
+                } else {
+                    assert.equal(args[1], 'p2');
+                    battle.setOpponentName(args[1]);
+                }
             },
+
+            'turn': (args) => {
+                const turnNumber = parseInt(args[0]); // According to the last client, this number is a lie.
+                // TODO battle.handleTurn() ?
+            },
+
+            'request': (args) => {
+                const data = JSON.parse(args[0]);
+
+                console.log(data);
+
+                assertEqual(data.active.length, 1);
+                const moves = data.active[0];
+
+                const side = data.side;
+                assertEqual(side.name, this.username);
+                assertEqual(side.id, 'p1');
+
+                const pokemon = side.pokemon;
+                // TODO actually do something
+
+            }
 
 
         }
@@ -100,15 +135,15 @@ class PokemonClient extends EventEmitter {
             url: "http://play.pokemonshowdown.com/action.php",
             formData: {
                 act: 'login',
-                name: this.config.username,
-                pass: this.config.password,
+                name: this.username,
+                pass: this.password,
                 challengekeyid: keyId,
                 challenge: challenge
             }
         },  (err, response, body) => {
             // The body is returned with a square bracket at the beginning.
             const bodyData = JSON.parse(body.substring(1));
-            this.sendCommand('trn', [this.config.username, 0, bodyData.assertion])
+            this.sendCommand('trn', [this.username, 0, bodyData.assertion])
         });
     }
 
@@ -133,7 +168,15 @@ class PokemonClient extends EventEmitter {
     }
 
     newBattle(battleId) {
-        this.battles[battleId] = {};
+        const newBattle = new Battle(battleId, this);
+        this.battles[battleId] = newBattle
+
+        this.emit('newBattle', newBattle);
+
+    }
+
+    getBattle(battleId) {
+        return this.battles[battleId];
     }
 
     sendCommand(command, args){
