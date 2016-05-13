@@ -85,7 +85,7 @@ class PokemonClient extends EventEmitter {
                 if (args[0] === 'p1'){
                     assert.equal(args[1], this.username, "Username does not match player 1!");
                 } else {
-                    assert.equal(args[1], 'p2');
+                    assert.equal(args[0], 'p2');
                     battle.setOpponentName(args[1]);
                 }
             },
@@ -100,12 +100,12 @@ class PokemonClient extends EventEmitter {
 
                 console.log(data);
 
-                assertEqual(data.active.length, 1);
+                assert.equal(data.active.length, 1);
                 const moves = data.active[0];
 
                 const side = data.side;
-                assertEqual(side.name, this.username);
-                assertEqual(side.id, 'p1');
+                assert.equal(side.name, this.username);
+                assert.equal(side.id, 'p1');
 
                 const pokemon = side.pokemon;
                 // TODO actually do something
