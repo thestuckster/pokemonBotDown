@@ -186,6 +186,10 @@ class PokemonClient extends EventEmitter {
     acceptChallenge(username){
         this.sendCommand('accept', [username])
     }
+
+    sendChallenge(username, type) {
+        this.sendCommand('challenge', [username, type]);
+    }
 }
 
 // Returns a set of the differences between the keys of two objects.
