@@ -13,4 +13,8 @@ cl.on('newchallenge', data => {
 cl.on('newBattle', battle => {
     console.log("New battle ", battle.battleId);
 
+    battle.on('turn', () => {
+        console.log("Turn!");
+        battle.chooseMove(battle.getPossibleMoveIds()[0]);
+    });
 });

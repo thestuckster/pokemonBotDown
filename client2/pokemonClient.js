@@ -76,7 +76,8 @@ class PokemonClient extends EventEmitter {
                 const [name2, levelStr, gender] = args[1].split(',').map(s => s.trim());
                 const [health, maxHealth] = args[2].split('/').map(parseInt);
 
-                assert(pokemonName == name2, 'Pokemon names do not match!');
+                //assert(pokemonName == name2, 'Pokemon names do not match!');
+
 
                 const level = parseInt(levelStr.slice(1));
             },
@@ -92,7 +93,8 @@ class PokemonClient extends EventEmitter {
 
             'turn': (args) => {
                 const turnNumber = parseInt(args[0]); // According to the last client, this number is a lie.
-                // TODO battle.handleTurn() ?
+                console.log("Turn number is ", turnNumber);
+                battle.turn(turnNumber);
             },
 
             'request': (args) => {
@@ -101,16 +103,23 @@ class PokemonClient extends EventEmitter {
                 console.log(data);
 
                 assert.equal(data.active.length, 1);
-                const moves = data.active[0];
+                const moves = data.active[0].moves;
 
                 const side = data.side;
                 assert.equal(side.name, this.username);
                 assert.equal(side.id, 'p1');
 
                 const pokemon = side.pokemon;
-                // TODO actually do something
 
+                battle.setMoveData(moves);
+
+
+            },
+
+            'start': (args) => {
+                battle.start();
             }
+
 
 
         }
@@ -181,6 +190,12 @@ class PokemonClient extends EventEmitter {
 
     sendCommand(command, args){
         this.ws.send('|/' + command + ' ' + args.join());
+    }
+
+    sendBattleCommand(battleId, command, args, turnNumber){
+        const cmd = battleId + '|/' + command + ' ' + args.join() + '|' + turnNumber;
+        console.log("Sending battle command ", cmd);
+        this.ws.send(cmd);
     }
 
     acceptChallenge(username){

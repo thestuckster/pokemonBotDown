@@ -42,6 +42,19 @@ class Battle extends EventEmitter {
     win(){
         this.emit('win');
     }
+
+    turn(turnNumber){
+        this.turnNumber = turnNumber
+        this.emit('turn');
+    }
+
+    sendBattleCommand(command, args){
+        this.pclient.sendBattleCommand(this.battleId, command, args, this.turnNumber);
+    }
+
+    chooseMove(move){
+        this.sendBattleCommand('choose move', [move]);
+    }
 }
 
 module.exports = Battle;
