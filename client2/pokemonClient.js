@@ -102,18 +102,19 @@ class PokemonClient extends EventEmitter {
 
                 console.log(data);
 
-                assert.equal(data.active.length, 1);
-                const moves = data.active[0].moves;
-
                 const side = data.side;
+                const pokemon = side.pokemon;
+                const activePokemon = pokemon.filter((pokemon) => pokemon.active);
+
+                assert.equal(activePokemon.length, 1);
                 assert.equal(side.name, this.username);
                 assert.equal(side.id, 'p1');
 
-                const pokemon = side.pokemon;
-
-                battle.setMoveData(moves);
-
-
+                if ("active" in data) {
+                    assert.equal(data.active.length, 1);
+                    const moves = data.active[0].moves;
+                    battle.setMoveData(moves);
+                }
             },
 
             'start': (args) => {
