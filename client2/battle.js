@@ -19,15 +19,13 @@ class Battle extends EventEmitter {
     setMoveData(moveData){
         this.possibleMoves = {};
         moveData.forEach(move => {
-            if (!move.disabled){
-                let moveEntry = {};
-                moveEntry.name = move.move;
-                moveEntry.pp = move.pp;
-                moveEntry.maxpp = move.maxpp;
-                moveEntry.target = move.target;
+            let moveEntry = {};
+            moveEntry.name = move.move;
+            moveEntry.pp = move.pp;
+            moveEntry.maxpp = move.maxpp;
+            moveEntry.target = move.target;
 
-                this.possibleMoves[move.id] = moveEntry;
-            }
+            this.possibleMoves[move.id] = moveEntry;
         });
     }
 

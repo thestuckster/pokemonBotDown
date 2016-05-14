@@ -15,6 +15,13 @@ cl.on('newBattle', battle => {
 
     battle.on('turn', () => {
         console.log("Turn!");
-        battle.chooseMove(battle.getPossibleMoveIds()[0]);
+
+		const possibleMoves = battle.possibleMoves;
+		const firstAvailableMove = Object.keys(possibleMoves).find(moveId => {
+			const move = possibleMoves[moveId];
+			return !move.disable && move.pp > 0;
+		});
+
+        battle.chooseMove(firstAvailableMove);
     });
 });
