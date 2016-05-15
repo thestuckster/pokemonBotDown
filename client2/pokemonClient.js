@@ -5,6 +5,7 @@ const EventEmitter = require('events');
 const assert = require('assert');
 
 const Battle = require('./battle');
+const Trainer = require('./trainer');
 
 class PokemonClient extends EventEmitter {
     constructor(config){
@@ -18,7 +19,8 @@ class PokemonClient extends EventEmitter {
         this.systemMessageHandlers = {
             'challstr': this.handleChallstr,
             'pm': this.handlePm,
-            'updatechallenges': this.handleUpdateChallenges
+            'updatechallenges': this.handleUpdateChallenges,
+            'updateuser': this.handleUpdateUser
         };
 
         this.openChallenges = {};
@@ -28,10 +30,12 @@ class PokemonClient extends EventEmitter {
         this.ws.on('message', (data, flags) => {
             if (data[0] === '>'){
                 this.handleBattleMessage(data);
-            } else {
+            } else if (data[0] === '|') {
                 data.split('\n').forEach(line => {
                     this.handleSystemLine(line);
                 });
+            } else {
+                console.log("Unhandled ", data);
             }
         });
 
@@ -84,7 +88,7 @@ class PokemonClient extends EventEmitter {
 
             'player': (args) => {
                 if (args[0] === 'p1'){
-                    assert.equal(args[1], this.username, "Username does not match player 1!");
+                    assert.equal(args[1], this.trainer.name, "Username does not match player 1!");
                 } else {
                     assert.equal(args[0], 'p2');
                     battle.setOpponentName(args[1]);
@@ -107,7 +111,7 @@ class PokemonClient extends EventEmitter {
                 const activePokemon = pokemon.filter((pokemon) => pokemon.active);
 
                 assert.equal(activePokemon.length, 1);
-                assert.equal(side.name, this.username);
+                assert.equal(side.name, this.trainer.name);
                 assert.equal(side.id, 'p1');
 
                 if ("active" in data) {
@@ -120,8 +124,6 @@ class PokemonClient extends EventEmitter {
             'start': (args) => {
                 battle.start();
             }
-
-
 
         }
 
@@ -175,6 +177,17 @@ class PokemonClient extends EventEmitter {
         }));
 
         this.openChallenges = challengerData.challengesFrom;
+    }
+
+    handleUpdateUser(args){
+        const name = args[0];
+        const isNamed = parseInt(args[1]);
+        const avatarId = parseInt(args[2]);
+        if (this.trainer) {
+            this.trainer.updateData(name, isNamed, avatarId);
+        } else {
+            this.trainer = new Trainer(name, isNamed, avatarId, this);
+        }
     }
 
     newBattle(battleId) {

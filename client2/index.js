@@ -16,6 +16,8 @@ cl.on('newBattle', battle => {
     battle.on('turn', () => {
         console.log("Turn!");
 
+        cl.trainer.setAvatarId(Math.ceil(Math.random() * 293));
+
 		const possibleMoves = battle.possibleMoves;
 		const firstAvailableMove = Object.keys(possibleMoves).find(moveId => {
 			const move = possibleMoves[moveId];
