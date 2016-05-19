@@ -67,12 +67,14 @@ class PokemonClient extends EventEmitter {
         const lines = msg.split('\n');
         const battleId = lines[0].slice(1);
 
-        const battle = this.getBattle(battleId); // May be undefined.
+        let battle = this.getBattle(battleId); // May be undefined.
+        const context = this;
 
         const battleHandlers = {
             'init': (args) => {
                 assert(battle == null, 'Battle recieved init but already exists!');
                 this.newBattle(battleId);
+                battle = this.getBattle(battleId);
             },
 
             'switch': (args) => {
@@ -123,11 +125,49 @@ class PokemonClient extends EventEmitter {
 
             'start': (args) => {
                 battle.start();
+            },
+
+            'title': ([title]) => {
+                battle.setTitle(title);
+            },
+
+            // j is for join -.-
+            'j': ([username]) => {
+                battle.addSpectator(username);
+            },
+
+            // l is for leave 😭
+            'l': ([username]) => {
+                battle.removeSpectator(username);
+            },
+
+            'gametype': ([gameType]) => {
+                battle.setGameType(gameType);
+            },
+
+            'gen': ([gen]) => {
+                battle.setGen(gen);
+            },
+
+            'tier': ([tier]) => {
+                battle.setTier(tier);
+            },
+
+            'seed': ([seed]) => {
+                battle.setSeed(seed);
+            },
+
+            'rule': ([rule]) => {
+                battle.addRule(rule);
             }
 
         }
 
         lines.slice(1).forEach(line => {
+            if (/^\s*$/.test(line)) {
+                return;
+            }
+
             const pieces = line.split('|');
 
             const first = pieces[1];
