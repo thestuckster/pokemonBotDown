@@ -8,6 +8,8 @@ class Battle extends EventEmitter {
         this.battleId = battleId;
         this.pclient = pokemonClient;
         this.moves = null;
+        this.spectators = [];
+        this.rules = [];
     }
 
     setOpponentName(name){
@@ -52,6 +54,42 @@ class Battle extends EventEmitter {
 
     chooseMove(move){
         this.sendBattleCommand('choose move', [move]);
+    }
+
+    setTitle(title) {
+        this.title = title;
+    }
+
+    addSpectator(username) {
+        this.spectators[username] = true;
+    }
+
+    removeSpectator(username) {
+        delete this.spectators[username];
+    }
+
+    getSpectators() {
+        Object.keys(this.spectators);
+    }
+
+    setGameType(gameType) {
+        this.gameType = gameType;
+    }
+
+    setGen(gen) {
+        this.gen = gen;
+    }
+
+    setTier(tier) {
+        this.tier = tier;
+    }
+
+    setSeed(seed) {
+        this.seed = seed;
+    }
+
+    addRule(rule) {
+        this.rules.push(rule);
     }
 }
 
