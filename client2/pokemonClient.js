@@ -20,7 +20,8 @@ class PokemonClient extends EventEmitter {
             'challstr': this.handleChallstr,
             'pm': this.handlePm,
             'updatechallenges': this.handleUpdateChallenges,
-            'updateuser': this.handleUpdateUser
+            'updateuser': this.handleUpdateUser,
+            'formats': this.handleFormats
         };
 
         this.openChallenges = {};
@@ -228,6 +229,10 @@ class PokemonClient extends EventEmitter {
         } else {
             this.trainer = new Trainer(name, isNamed, avatarId, this);
         }
+    }
+
+    handleFormats([formats]) {
+        this.formats = formats;
     }
 
     newBattle(battleId) {
