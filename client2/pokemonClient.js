@@ -131,13 +131,11 @@ class PokemonClient extends EventEmitter {
                 battle.setTitle(title);
             },
 
-            // j is for join -.-
-            'j': ([username]) => {
+            'join': ([username]) => {
                 battle.addSpectator(username);
             },
 
-            // l is for leave 😭
-            'l': ([username]) => {
+            'leave': ([username]) => {
                 battle.removeSpectator(username);
             },
 
@@ -170,7 +168,7 @@ class PokemonClient extends EventEmitter {
 
             const pieces = line.split('|');
 
-            const first = pieces[1];
+            const first = PokemonClient._normalizeCommand(pieces[1]);
             const remainder = pieces.slice(2);
 
             if (battleHandlers[first]){
@@ -179,6 +177,18 @@ class PokemonClient extends EventEmitter {
                 console.log("Unhandled battle ", first, ": ", remainder);
             }
         });
+    }
+
+    static _normalizeCommand(command){
+        if (['j', 'J'].indexOf(command) > -1) {
+            return 'join';
+        } else if (['l', 'L'].indexOf(command) > -1) {
+            return 'leave';
+        } else if (command === 'b') {
+            return 'battle';
+        } else {
+            return command;
+        }
     }
 
     handleChallstr(args){
