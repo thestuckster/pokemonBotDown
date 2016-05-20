@@ -6,6 +6,7 @@ const assert = require('assert');
 
 const Battle = require('./battle');
 const Trainer = require('./trainer');
+const ClientUtils = require("./clientUtils");
 
 class PokemonClient extends EventEmitter {
     constructor(config){
@@ -220,7 +221,7 @@ class PokemonClient extends EventEmitter {
     handleUpdateChallenges(args){
         const challengerData = JSON.parse(args[0]);
 
-        const newChallengers = keyDifferences(challengerData.challengesFrom, this.openChallenges);
+        const newChallengers = ClientUtils.keyDifferences(challengerData.challengesFrom, this.openChallenges);
         newChallengers.forEach(challenger => this.emit('newchallenge', {
             challenger: challenger,
             challengeType: challengerData.challengesFrom[challenger]
@@ -275,11 +276,4 @@ class PokemonClient extends EventEmitter {
     }
 }
 
-// Returns a set of the differences between the keys of two objects.
-function keyDifferences(a, b) {
-    const aKeys = new Set(Object.keys(a));
-    const bKeys = new Set(Object.keys(b));
-    const difference = new Set([...aKeys].filter(x => !bKeys.has(x)));
-    return difference;
-}
 module.exports.PokemonClient = PokemonClient;
